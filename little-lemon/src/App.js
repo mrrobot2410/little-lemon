@@ -4,31 +4,47 @@ import Footer from './components/Footer';
 import Main from './components/Main';
 import BookingPage from './components/BookingPage.js';
 import {Routes, Route} from 'react-router-dom';
-import { useState, useReducer } from 'react';
-
+import { useState, useReducer, useEffect } from 'react';
+import { fetchAPI, submitAPI } from './api';
+import { useNavigate } from "react-router-dom";
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 function App() {
 
-  const initialState = {
-    availableTimes: ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'],
-  };
-  
+  const navigate = useNavigate();
+
+  const initializeTimes = (date) => {
+    return fetchAPI(date);
+  }
+
+  const updateTimes = (date) => {
+    const new_date= new Date(date);
+    return fetchAPI(new_date)
+  }
+
+  const submitForm = (data) =>{
+    const submitted = submitAPI(data);
+    if (submitted){
+      navigate("/confirmed")
+    }
+  }
 
   const reducer = (state, action) => {
+    let state_new;
     switch (action.type) {
       case 'UPDATE_TIMES':
-        return { ...state, availableTimes: initialState.availableTimes };
+      const date_new = new Date(action.payload);
+      state_new = updateTimes(date_new)
+      console.log(state_new);
+      break;
+
       default:
-        return state;
+        throw new Error()
     }
-  };
+    return state_new
+  }
 
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  const updateTimes = (selectedDate) => {
-    dispatch({ type: 'UPDATE_TIMES', payload: selectedDate });
-    return selectedDate;
-  };
+  const [availableTimes, dispatch] = useReducer(reducer, initializeTimes(new Date()));
   
 
   return (
@@ -36,7 +52,8 @@ function App() {
   <Header/>
   <Routes>
     <Route path='/' element={<Main/>}/>
-    <Route path="/booking" element={<BookingPage  timeSlots={state.availableTimes} updateTimes={updateTimes}/>}></Route>
+    <Route path="/booking" element={<BookingPage  timeSlots={availableTimes} dispatch={dispatch} updateTimes={updateTimes} submitForm={submitForm}/>}></Route>
+    <Route path='/confirmed' element={<ConfirmedBooking/>}/>  
   </Routes>
   <Footer/> 
   </>
