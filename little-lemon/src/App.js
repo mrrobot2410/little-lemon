@@ -54,6 +54,7 @@ function App() {
     <Route path='/' element={<Main/>}/>
     <Route path="/booking" element={<BookingPage  timeSlots={availableTimes} dispatch={dispatch} updateTimes={updateTimes} submitForm={submitForm}/>}></Route>
     <Route path='/confirmed' element={<ConfirmedBooking/>}/>  
+    <Route path='*' element={<div className='layout fullpage'><h1>coming soon...</h1></div>} />
   </Routes>
   <Footer/> 
   </>

@@ -50,7 +50,7 @@ export default function BookingForm(props) {
   return (
     <>
       <h2>Book now</h2>
-      <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="res-date" aria-label="Choose date">Choose date</label>
         <input type="date" id="res-date" value={data.date} onChange={handleDateChange} name='date' min={today} /> 
         <label htmlFor="res-time" aria-label="Choose time">Choose time</label>
