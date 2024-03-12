@@ -2,10 +2,11 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import BookingForm from './components/BookingForm';
 import ConfirmedBooking from './components/ConfirmedBooking';
 
+const updateTimesMock = jest.fn();
+const timeSlots = ['10:00', '12:00', '15:00'];
+
 describe("Booking form", () => {
   test("Reset after submit", () => {
-    const updateTimesMock = jest.fn();
-    const timeSlots = ['10:00', '12:00', '15:00'];
 
     const { getByLabelText, getByText } = render(
       <BookingForm timeSlots={timeSlots} updateTimes={updateTimesMock} />
@@ -34,3 +35,4 @@ test('renders heading', () => {
   const headingElement = getByText(/Booking confirmed/i);
   expect(headingElement).toBeInTheDocument();
 });
+
