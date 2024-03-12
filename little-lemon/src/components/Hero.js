@@ -1,5 +1,6 @@
 import React from 'react';
 import foodImage from '../media/restauranfood.jpg';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -8,12 +9,14 @@ export default function Hero() {
                 <h1>Little Lemon</h1>
                 <p className='subtitle'>Chicago</p>
                 <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
-                <button
-                    onMouseEnter={(e) => e.target.style.transform = 'translateY(-5px)'}
-                    onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
-                    >
-                    Reserve a Table
-                </button>
+                <Link to="/booking">
+                    <button
+                        onMouseEnter={(e) => e.target.style.transform = 'translateY(-5px)'}
+                        onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
+                        >
+                        Reserve a Table
+                    </button>
+                </Link>
         </div>
         <div className='container'>
         <img

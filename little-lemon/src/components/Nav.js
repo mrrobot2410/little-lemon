@@ -1,31 +1,32 @@
 import React from 'react'
 import logo from '../media/Logo.svg'
 import '../styles/header.css'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
   return (
     <nav style={{ display: 'flex', justifyContent: 'center' }}>
         <ul>
             <li>
-                <img src={logo} alt="" />
+                <Link className='nav-item' to="/"><img src={logo} alt="" /></Link>
             </li>
             <li>
-                <a href="/" style={{ textDecoration: 'none', color: 'black' }}>Home</a>
+                <Link className='nav-item' to="/">Home</Link>
             </li>
             <li>
-                <a href="/about" style={{ textDecoration: 'none', color: 'black' }}>About</a>
+                <Link className='nav-item' to="/about">About</Link>
             </li>
             <li>
-                <a href="/menu" style={{ textDecoration: 'none', color: 'black' }}>Menu</a>
+                <Link className='nav-item' to="/menu">Menu</Link>
             </li>
             <li>
-                <a href="/reservations" style={{ textDecoration: 'none', color: 'black' }}>Reservations</a>
+                <Link className='nav-item' to="/booking">Reservations</Link>
             </li>
             <li>
-                <a href="/orderOnline" style={{ textDecoration: 'none', color: 'black' }}>Order Online</a>
+                <Link className='nav-item' to="/orderOnline">Order Online</Link>
             </li>
             <li>
-                <a href="/login" style={{ textDecoration: 'none', color: 'black' }}>Login</a>
+                <Link className='nav-item' to="/login">Login</Link>
             </li>
         </ul>
     </nav>

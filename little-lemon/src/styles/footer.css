@@ -36,6 +36,10 @@ footer p {
     font-weight: bold;
 }
 
+footer p:hover,a:hover{
+    color: #F4CE14;
+}
+
 .footer-row{
     display: flex;
     flex-direction: column;
