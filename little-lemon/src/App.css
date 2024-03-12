@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+button{
+  font-size: 18px;
+  width: 200px;
+  height: 60px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #F4CE14;
+  transition: transform 0.2s ease-in-out;
+}
+
+nav {
+  font-size: 20px;
+}

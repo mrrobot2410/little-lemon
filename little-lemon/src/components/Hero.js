@@ -6,8 +6,8 @@ export default function Hero() {
     <div className='hero layout'>
         <div className='container'>
                 <h1>Little Lemon</h1>
-                <p>Chicago</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className='subtitle'>Chicago</p>
+                <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
                 <button
                     onMouseEnter={(e) => e.target.style.transform = 'translateY(-5px)'}
                     onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}

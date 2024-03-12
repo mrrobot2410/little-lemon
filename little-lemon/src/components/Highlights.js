@@ -19,7 +19,7 @@ export default function Highlights() {
                     <p className='price'>$12.99</p>
                 </div>
                 <p>Dieser Salat ist unser Bestseller und wird von Groß und Klein gerne bestellt.</p>
-                <p>Order a delivery</p>
+                <p className='order'>Order a delivery</p>
             </div>
             <div className="card">
                 <img src={caeserSaladImage} alt="" />
@@ -28,7 +28,7 @@ export default function Highlights() {
                     <p className='price'>$12.99</p>
                 </div>
                 <p>Dieser Salat ist unser Bestseller und wird von Groß und Klein gerne bestellt.</p>
-                <p>Order a delivery</p>
+                <p className='order'>Order a delivery</p>
             </div>
             <div className="card">
                 <img src={caeserSaladImage} alt="" />
@@ -37,7 +37,7 @@ export default function Highlights() {
                     <p className='price'>$12.99</p>
                 </div>
                 <p>Dieser Salat ist unser Bestseller und wird von Groß und Klein gerne bestellt.</p>
-                <p>Order a delivery</p>
+                <p className='order'>Order a delivery</p>
             </div>
             <div className="card">
                 <img src={caeserSaladImage} alt="" />
@@ -46,7 +46,7 @@ export default function Highlights() {
                     <p className='price'>$12.99</p>
                 </div>
                 <p>Dieser Salat ist unser Bestseller und wird von Groß und Klein gerne bestellt.</p>
-                <p>Order a delivery</p>
+                <p className='order'>Order a delivery</p>
             </div>
             <div className="card">
                 <img src={caeserSaladImage} alt="" />
@@ -55,7 +55,7 @@ export default function Highlights() {
                     <p className='price'>$12.99</p>
                 </div>
                 <p>Dieser Salat ist unser Bestseller und wird von Groß und Klein gerne bestellt.</p>
-                <p>Order a delivery</p>
+                <p className='order'>Order a delivery</p>
             </div>
             <div className="card">
                 <img src={caeserSaladImage} alt="" />
@@ -64,7 +64,7 @@ export default function Highlights() {
                     <p className='price'>$12.99</p>
                 </div>
                 <p>Dieser Salat ist unser Bestseller und wird von Groß und Klein gerne bestellt.</p>
-                <p>Order a delivery</p>
+                <p className='order'>Order a delivery</p>
             </div>
             <div className="card">
                 <img src={caeserSaladImage} alt="" />
@@ -73,7 +73,7 @@ export default function Highlights() {
                     <p className='price'>$12.99</p>
                 </div>
                 <p>Dieser Salat ist unser Bestseller und wird von Groß und Klein gerne bestellt.</p>
-                <p>Order a delivery</p>
+                <p className='order'>Order a delivery</p>
             </div>
             <div className="card">
                 <img src={caeserSaladImage} alt="" />
@@ -82,7 +82,7 @@ export default function Highlights() {
                     <p className='price'>$12.99</p>
                 </div>
                 <p>Dieser Salat ist unser Bestseller und wird von Groß und Klein gerne bestellt.</p>
-                <p>Order a delivery</p>
+                <p className='order'>Order a delivery</p>
             </div>
         </div>
     </div>
